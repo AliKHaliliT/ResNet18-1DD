@@ -60,7 +60,6 @@ class ResNet181DD(tf.keras.Model):
                                  padding="same", use_bias=False, 
                                  normalization="batch_norm", activation="relu")
         self.stem3 = tf.keras.layers.MaxPool1D(pool_size=(2, ), strides=(2, ))
-        
 
         # Backbone
         ## Stage 1
