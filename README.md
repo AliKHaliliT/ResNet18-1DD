@@ -38,6 +38,7 @@ This code is compatible with **Python 3.12.8** and **TensorFlow 2.18.0**.
 ```python
 from ResNet181DD import ResNet181DD
 
+
 model = ResNet181DD()
 model.build((None, 128, 32))
 model.summary()
