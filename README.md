@@ -18,6 +18,7 @@ The codebase is fully integratable inside the TensorFlow and Keras code pipeline
 
 ## Key Enhancements
 - **Modified Stem:** Utilizes two convolutional layers instead of a single one.
+- **ResNet-B Inspired Strides:** Moved the stride placement in the residual blocks from the first convolution to the second.
 - **ResNet-D Inspired Shortcut:** Introduces an average pooling layer before the 1x1 convolution in the shortcut connection.
 - **Reduced Downsampling:** Downsampling is now performed only twice (in the stem block) instead of the original five times.
 

@@ -42,14 +42,14 @@ class Residual1DD(tf.keras.layers.Layer):
         # Main Path
         self.feature_extract = Conv1DLayer(filters=self.filters, 
                                            kernel_size=(3, ), 
-                                           strides=self.strides, 
+                                           strides=(1, ),
                                            padding="same",
                                            use_bias=False, 
                                            normalization="batch_norm",
                                            activation="relu")
         self.feature_extract1 = Conv1DLayer(filters=self.filters, 
                                             kernel_size=(3, ), 
-                                            strides=(1, ), 
+                                            strides=self.strides, 
                                             padding="same",
                                             use_bias=False, 
                                             normalization="batch_norm")
