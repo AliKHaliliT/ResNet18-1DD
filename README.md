@@ -18,7 +18,7 @@ The codebase is fully integratable inside the TensorFlow and Keras code pipeline
 <br/>
 <div align="center" style="display: flex; justify-content: center; align-items: center;">
     <img src="util_resources/readme/resnet_c.png" alt="ResNet-C image from the paper" style="width:300px; height:auto; margin-right: 16px;">
-    <img src="util_resources/readme/shortcut.png" alt="Shortcut image by author" style="width:350px; height:400;">
+    <img src="util_resources/readme/shortcut.png" alt="Shortcut image by author" style="width:350px; height:auto;">
 </div>
 <br/>
 
