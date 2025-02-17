@@ -1,4 +1,11 @@
 # ResNet18-1DD
+<div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
+    <img src="https://img.shields.io/github/license/AliKHaliliT/ResNet18-1DD" alt="License">
+    <img src="https://github.com/AliKHaliliT/ResNet18-1DD/actions/workflows/tests.yml/badge.svg" alt="tests">
+    <img src="https://img.shields.io/github/last-commit/AliKHaliliT/ResNet18-1DD" alt="Last Commit">
+    <img src="https://img.shields.io/github/issues/AliKHaliliT/ResNet18-1DD" alt="Open Issues">
+</div>
+<br/>
 
 A fully serializable 1D implementation of ResNet18, incorporating improvements from the paper ["Bag of Tricks for Image Classification with Convolutional Neural Networks"](https://arxiv.org/abs/1812.01187) along with additional personal optimizations and modifications.
 
