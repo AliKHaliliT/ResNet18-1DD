@@ -3,8 +3,8 @@ name: Tests
 on:
   pull_request:
     paths:
-      - 'ResNet181DD/**'
-      - 'tests/**'
+      - "ResNet181DD/**"
+      - "tests/**"
 
 jobs:
   test:
