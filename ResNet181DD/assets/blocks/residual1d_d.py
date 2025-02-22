@@ -1,8 +1,10 @@
+from tensorflow.keras.saving import register_keras_serializable # type: ignore
 import tensorflow as tf
 from ..layers.conv1d_layer import Conv1DLayer
 from typing import Union, Any
 
 
+@register_keras_serializable()
 class Residual1DD(tf.keras.layers.Layer):
 
     """

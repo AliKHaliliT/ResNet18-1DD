@@ -1,8 +1,10 @@
+from tensorflow.keras.saving import register_keras_serializable # type: ignore
 import tensorflow as tf
 from typing import Optional, Union, Any
 from ..utils.components.common.activation_function import activation_function
 
 
+@register_keras_serializable()
 class Conv1DLayer(tf.keras.layers.Layer):
 
     """
