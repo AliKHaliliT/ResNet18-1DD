@@ -187,53 +187,6 @@ class ResNet181DD(tf.keras.Model):
         return outputs
     
 
-    def compute_output_shape(self, input_shape: Union[tf.TensorShape, tuple[int, int, int]]) -> Union[tf.TensorShape, tuple[int, int]]:
-
-        """
-
-        Method to compute the output shape of the ResNet181DD network.
-        
-
-        Parameters
-        ----------
-        input_shape : tf.TensorShape or tuple
-            Shape of the input tensor.
-        
-        
-        Returns
-        -------
-        output_shape : tf.TensorShape
-            Shape of the output tensor.
-        
-        """
-
-        # Stem
-        input_shape = self.stem.compute_output_shape(input_shape)
-        input_shape = self.stem1.compute_output_shape(input_shape)
-        input_shape = self.stem2.compute_output_shape(input_shape)
-        input_shape = self.stem3.compute_output_shape(input_shape)
-
-        # Backbone
-        ## Stage 1
-        input_shape = self.block.compute_output_shape(input_shape)
-        input_shape = self.block1.compute_output_shape(input_shape)
-        ## Stage 2
-        input_shape = self.block2.compute_output_shape(input_shape)
-        input_shape = self.block3.compute_output_shape(input_shape)
-        ## Stage 3
-        input_shape = self.block4.compute_output_shape(input_shape)
-        input_shape = self.block5.compute_output_shape(input_shape)
-        ## Stage 4
-        input_shape = self.block6.compute_output_shape(input_shape)
-
-        # Head
-        input_shape = self.pooling.compute_output_shape(input_shape)
-        output_shape = self.embedding.compute_output_shape(input_shape)
-
-
-        return output_shape
-    
-
     def get_config(self) -> dict[str, Any]:
 
         """

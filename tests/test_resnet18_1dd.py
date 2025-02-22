@@ -65,20 +65,6 @@ class TestResNet181DD(unittest.TestCase):
         self.assertIsInstance(history, tf.keras.callbacks.History)
 
 
-    def test_compute__output__shape_shape_intended__shape(self):
-
-        # Arrange
-        model = ResNet181DD()
-        input_tensor = tf.random.uniform((1, 32, 3))
-
-        # Act
-        output = model(input_tensor)
-        output_shape = model.compute_output_shape(input_tensor.shape)
-
-        # Assert
-        self.assertEqual(output.shape, output_shape)
-
-
     def test_get__config_init_matching__dict(self):
 
         # Arrange
