@@ -3,11 +3,6 @@ import tensorflow as tf
 from .assets.layers.conv1d_layer import Conv1DLayer
 from .assets.blocks.residual1d_d import Residual1DD
 from typing import Union, Any
-import logging
-
-
-# Configure logging
-logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
 
 
 @register_keras_serializable()
@@ -97,10 +92,6 @@ class ResNet181DD(tf.keras.Model):
         None.
 
         """
-
-        if input_shape[1] < 4:
-            logging.warning("Caution: Setting input sequence length to anything lower than 4 is not recommended!")
-
 
         super().build(input_shape)
 
