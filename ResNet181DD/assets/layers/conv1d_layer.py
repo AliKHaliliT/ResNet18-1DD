@@ -77,9 +77,9 @@ class Conv1DLayer(tf.keras.layers.Layer):
 
         if not isinstance(filters, int) or filters < 0:
             raise ValueError(f"filters must be a non-negative integer. Received: {filters} with type {type(filters)}")
-        if not isinstance(kernel_size, tuple) or len(kernel_size) != 1 or not all(isinstance(k, int) and k > 0 for k in kernel_size):
+        if len(kernel_size) != 1 or not all(isinstance(k, int) and k > 0 for k in kernel_size):
             raise ValueError(f"kernel_size must be a tuple of a single positive integer. Received: {kernel_size} with type {type(kernel_size)}")
-        if not isinstance(strides, tuple) or len(strides) != 1 or not all(isinstance(s, int) and s > 0 for s in strides):
+        if len(strides) != 1 or not all(isinstance(s, int) and s > 0 for s in strides):
             raise ValueError(f"strides must be a tuple of a single positive integer. Received: {strides} with type {type(strides)}")
         if not isinstance(padding, str) or padding not in ["valid", "same"]:
             raise ValueError(f"padding must be either 'valid' or 'same'. Received: {padding} with type {type(padding)}")
