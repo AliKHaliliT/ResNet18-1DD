@@ -1,11 +1,10 @@
-from tensorflow.keras.saving import register_keras_serializable # type: ignore
 import tensorflow as tf
 from .assets.layers.conv1d_layer import Conv1DLayer
 from .assets.blocks.residual1d_d import Residual1DD
 from typing import Union, Any
 
 
-@register_keras_serializable()
+@tf.keras.utils.register_keras_serializable()
 class ResNet181DD(tf.keras.Model):
 
     """
